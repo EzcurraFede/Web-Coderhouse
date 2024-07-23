@@ -1,0 +1,313 @@
+* {
+    font-family: MiFuente;
+}
+
+@font-face {
+    font-family: MiFuente;
+    src: url('../Font/DancingScript-VariableFont_wght.ttf');
+}
+
+/* Header */
+
+main {
+    background-image: url(../image/fondo_rosa.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+}
+
+#navbar {
+    background-color: #29343F;
+}
+
+header nav li {
+    padding: 0 15px 0 15px;
+}
+
+header nav a {
+    color: white !important;
+    transition: 1s !important;
+}
+
+header nav ul a:hover {
+    color: rgb(255, 0, 43) !important;
+    filter: drop-shadow(0 0 23px rgb(229, 8, 44)) !important;
+    font-size: 30px !important;
+}
+
+/* index */
+
+.carousel-item img {
+    height: 700px;
+    z-index: -1;
+    filter: brightness(40%)
+}
+
+.titulo_inicio {
+    margin: 0 200px 0 100px;
+    position: absolute;
+    filter: drop-shadow(0 0 10px white);
+    top: 150px;
+}
+
+.titulo_inicio h1 {
+    font-size: 45px;
+}
+
+@media (max-width: 768px) {
+    .titulo_inicio h3 {
+        font-size: 18px !important;
+    }
+}
+
+.tarjetas2 img {
+    height: 350px;
+}
+
+.tarjetas2 .card:hover {
+    opacity: 70%;
+    border: 2px solid black;
+}
+
+
+/* Contacto */
+
+.contacto_contendor {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: 300px;
+    justify-content: center;
+    align-items: center;
+    column-gap: 120px;
+    padding-top: 100px;
+}
+
+.contacto_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid #29343F;
+    border-left: 2px solid #29343F;
+    height: 200px;
+}
+
+.contacto_item h3 {
+    font-size: 30px;
+}
+
+.contacto_item p {
+    font-size: 25px;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+.form_contacto {
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 400px 0 400px;
+    padding: 50px 0 50px 0;
+    border-radius: 25px;
+    backdrop-filter: blur(100px);
+}
+
+.form_contacto h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+
+.form_elemento {
+    padding: 10px;
+}
+
+.form_elemento label {
+    font-weight: bold;
+    font-size: 25px;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.form_contacto input[type="button"] {
+    padding: 20px;
+    width: 400px;
+    background-color: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.form_elemento input,
+textarea {
+    width: 400px;
+    max-width: 500px;
+    height: 40px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form_elemento #mensaje {
+    height: 100px;
+}
+
+.form_contacto .enviar:hover {
+    background-color: #29343F;
+    font-weight: bolder;
+    color: white;
+}
+
+.form_contacto .enviar:active {
+    background-color: #29343F;
+    font-weight: bolder;
+    color: white;
+    font-size: 18px;
+    padding: 20px;
+    box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Eventos */
+
+.tarjetas_eventos {
+    width: 100%;
+    max-width: 100%;
+}
+
+.evento {
+    display: flex;
+    border-radius: 40px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.texto {
+    flex: 0.5;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+.imagen {
+    flex: 1;
+}
+
+.imagen img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Menú */
+
+.menu_contenedor {
+    border: 1px solid #3f3f3f;
+    display: grid;
+    grid-template-columns: repeat(2, 450px);
+    justify-content: center;
+    align-items: center;
+    column-gap: 80px;
+    padding: 150px 0 100px 0;
+}
+
+.menu_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 150px;
+    border-radius: 26px 58px;
+    border: 1px solid #3f3f3f;
+    grid-column: 1/2;
+    padding: 15px;
+}
+
+.menu_item h2 {
+    font-size: 25px;
+    padding-bottom: 25px;
+}
+
+.menu_item p {
+    font-size: 23px;
+}
+
+.menu_img {
+    grid-column: 2/2;
+    grid-row: 1/5;
+    filter: drop-shadow(0 0 23px #3f3f3f);
+    border-radius: 80%;
+}
+
+.menu_img img {
+    border-radius: 5%;
+    height: 800px;
+}
+
+.menu_titulo {
+    font-size: 45px;
+}
+
+/* Excelencia Culinaria */
+
+.excelencia_cont_items {
+    border: 1px solid #3f3f3f;
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    grid-template-rows: 300px;
+    justify-content: center;
+    align-items: center;
+    padding: 200px 0 150px 0;
+    gap: 40px;
+    background-color: transparent;
+}
+
+.excelencia_cont_items img {
+    height: 50px;
+}
+
+.excelencia_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    margin: 10px 0 10px 0;
+    background-color: transparent;
+    border: 2px solid #4d5b69;
+    border-radius: 10px;
+}
+
+.excelencia_item h2 {
+    margin: 40px 0 40px 0;
+    font-size: 30px;
+}
+
+.excelencia_item p {
+    margin: 0 30px 10px 30px;
+    font-size: 20px;
+}
+
+/* Footer */
+
+footer {
+    background-color: #4d5b69;
+}
+
+footer ul li img {
+    height: 25px;
+}
+
+footer .whatsapp {
+    height: 100px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+}
