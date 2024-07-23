@@ -9,7 +9,7 @@
 
 /* Header */
 
-main {
+body {
     background-image: url(../image/fondo_rosa.jpg);
     background-repeat: no-repeat;
     width: 100%;
@@ -19,7 +19,10 @@ main {
 }
 
 #navbar {
-    background-color: #29343F;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
 }
 
 header nav li {
@@ -27,7 +30,7 @@ header nav li {
 }
 
 header nav a {
-    color: white !important;
+    color: black !important;
     transition: 1s !important;
 }
 
@@ -105,6 +108,7 @@ header nav ul a:hover {
 }
 
 .form_contacto {
+    backdrop-filter: blur(100px);
     border: 3px solid rgba(255, 255, 255, 0.5);
     background-color: transparent;
     display: flex;
@@ -114,7 +118,6 @@ header nav ul a:hover {
     margin: 20px 400px 0 400px;
     padding: 50px 0 50px 0;
     border-radius: 25px;
-    backdrop-filter: blur(100px);
 }
 
 .form_contacto h2 {
@@ -174,36 +177,72 @@ textarea {
 
 /* Eventos */
 
-.tarjetas_eventos {
+.container {
+    height: 600px;
     width: 100%;
-    max-width: 100%;
-}
-
-.evento {
-    display: flex;
-    border-radius: 40px;
+    border-radius: 1em;
     overflow: hidden;
-    margin-bottom: 5px;
+    margin-top: 140px;
+    border-radius: 10%;
 }
 
-.texto {
-    flex: 0.5;
-    background-color: black;
-    color: white;
+.palette {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
-}
-
-.imagen {
-    flex: 1;
-}
-
-.imagen img {
+    height: 90%;
     width: 100%;
-    height: auto;
-    display: block;
+}
+
+.color {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    transition: flex 0.1s linear;
+    cursor: pointer;
+}
+
+.color span {
+    opacity: 0;
+    transition: opacity 0.1s linear;
+    font-size: 50px;
+    color: black;
+    filter: drop-shadow(0 0 5px white);
+    margin-top: 20px;
+}
+
+.color:nth-child(1) {
+    background-image: url(../image/Evento1.jfif);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.color:nth-child(2) {
+    background-image: url(../image/Evento2.jfif);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.color:nth-child(3) {
+    background-image: url(../image/Evento3.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.color:nth-child(4) {
+    background-image: url(../image/Eventos.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.color:hover {
+    flex: 2;
+    filter: grayscale();
+}
+
+.color:hover span {
+    opacity: 1;
+    color: black;
 }
 
 /* Menú */
@@ -223,7 +262,7 @@ textarea {
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 150px;
+    height: 200px;
     border-radius: 26px 58px;
     border: 1px solid #3f3f3f;
     grid-column: 1/2;
