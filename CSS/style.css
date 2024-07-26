@@ -14,9 +14,8 @@
 body {
     background-image: url(../image/fondo_rosa.jpg);
     background-repeat: no-repeat;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
+    background-size: cover;
+    overflow-x: hidden;
 }
 
 #navbar {
@@ -26,7 +25,7 @@ body {
 }
 
 header nav li {
-    padding: 0 15px 0 15px;
+    padding: 0 15px;
 }
 
 header nav a {
@@ -39,37 +38,45 @@ header nav ul a:hover {
     font-size: 35px !important;
 }
 
-/* index */
+/* Carousel */
 
 .carousel-item img {
-    height: 500px;
-    z-index: -1;
-    filter: brightness(40%)
+    height: 600px;
+    object-fit: cover;
+    filter: brightness(40%);
 }
 
-.card {
-    border-radius: 40px;
-    cursor: pointer;
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 400px;
+    }
 }
+
+/* Main Section */
 
 .titulo_inicio {
-    margin: 0 50px 0 100px;
     position: absolute;
     filter: drop-shadow(0 0 10px white);
     top: 130px;
+    margin-left: 100px;
+    width: 80%
 }
 
 .titulo_inicio h1 {
     font-size: 40px;
+    width: 100%;
 }
 
 @media (max-width: 768px) {
     .titulo_inicio {
-        margin: 0 20px 0 70px;
+        margin: 0 0 0 25px;
+        top: 120px;
     }
 
     .titulo_inicio h3 {
         font-size: 15px !important;
+        margin-top: 5px !important;
+        width: 150px !important;
     }
 
     .titulo_inicio h1 {
@@ -77,12 +84,32 @@ header nav ul a:hover {
     }
 }
 
-.tarjetas2 img {
-    height: 350px;
+/* Cards */
+
+.tarjetas_item {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.col {
+    width: 480px;
+    padding: 30px !important;
 }
 
 .tarjetas2 .card:hover {
     opacity: 70%;
+}
+
+.card {
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 100px !important;
+    }
 }
 
 
@@ -96,6 +123,7 @@ header nav ul a:hover {
     align-items: center;
     column-gap: 120px;
     padding-top: 100px;
+    max-width: 100%;
 }
 
 .contacto_item {
@@ -188,8 +216,9 @@ textarea {
 
 /* Eventos */
 
+
 .eventos-container {
-    height: 600px;
+    height: 650px;
 }
 
 .evento-item {
@@ -252,6 +281,7 @@ textarea {
     justify-content: center;
     align-items: center;
     column-gap: 80px;
+    max-width: 100%;
     padding: 150px 0 100px 0;
 }
 
@@ -350,6 +380,7 @@ textarea {
     font-size: 20px;
 }
 
+
 /* Footer */
 
 footer {
@@ -363,7 +394,6 @@ footer ul li img {
 }
 
 footer .whatsapp {
-    height: 100px;
-    margin-right: 25px;
+    height: 80px;
     margin-bottom: 25px;
 }
