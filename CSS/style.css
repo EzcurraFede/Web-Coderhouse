@@ -9,14 +9,14 @@
     src: url('../Font/DancingScript-VariableFont_wght.ttf');
 }
 
-/* Header */
-
 body {
     background-image: url(../image/fondo_rosa.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     overflow-x: hidden;
 }
+
+/* Header */
 
 #navbar {
     background-color: rgba(255, 255, 255, 0.2);
@@ -52,7 +52,7 @@ header nav ul a:hover {
     }
 }
 
-/* Main Section */
+/* Index */
 
 .titulo_inicio {
     position: absolute;
@@ -75,8 +75,8 @@ header nav ul a:hover {
 
     .titulo_inicio h3 {
         font-size: 15px !important;
-        margin-top: 5px !important;
-        width: 150px !important;
+        margin-top: 15px !important;
+        width: 250px !important;
     }
 
     .titulo_inicio h1 {
@@ -192,7 +192,6 @@ textarea {
     max-width: 500px;
     height: 40px;
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .form_elemento #mensaje {
@@ -215,7 +214,6 @@ textarea {
 }
 
 /* Eventos */
-
 
 .eventos-container {
     height: 650px;
