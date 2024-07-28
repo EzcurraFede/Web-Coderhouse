@@ -115,7 +115,7 @@ header nav ul a:hover {
 
 /* Contacto */
 
-.contacto_contendor {
+.contacto_contenedor {
     display: grid;
     grid-template-columns: repeat(3, 300px);
     grid-template-rows: 300px;
@@ -124,6 +124,7 @@ header nav ul a:hover {
     column-gap: 120px;
     padding-top: 100px;
     max-width: 100%;
+    width: 100%;
 }
 
 .contacto_item {
@@ -134,6 +135,8 @@ header nav ul a:hover {
     border-right: 2px solid #29343F;
     border-left: 2px solid #29343F;
     height: 200px;
+    width: 100%;
+    max-width: 100%;
 }
 
 .contacto_item h3 {
@@ -146,6 +149,41 @@ header nav ul a:hover {
     font-style: italic;
 }
 
+@media (max-width: 1200px) {
+    .contacto_contenedor {
+        grid-template-columns: repeat(3, 200px);
+        grid-template-rows: 180px;
+        column-gap: 60px;
+        padding-top: 80px;
+    }
+
+    .contacto_item {
+        height: 120px;
+    }
+
+    .contacto_item h3 {
+        font-size: 25px;
+    }
+
+    .contacto_item p {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contacto_contenedor {
+        grid-template-columns: repeat(2, 100px);
+        grid-template-rows: 180px;
+        column-gap: 30px;
+    }
+
+    .contacto_item {
+        border: none;
+    }
+
+}
+
 .form_contacto {
     backdrop-filter: blur(100px);
     border: 3px solid rgba(255, 255, 255, 0.5);
@@ -154,7 +192,7 @@ header nav ul a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 20px 400px 0 400px;
+    margin: 20px 350px 0 350px;
     padding: 50px 0 50px 0;
     border-radius: 25px;
 }
@@ -163,7 +201,6 @@ header nav ul a:hover {
     font-size: 30px;
     margin-bottom: 15px;
 }
-
 
 .form_elemento {
     padding: 10px;
@@ -205,12 +242,48 @@ textarea {
 }
 
 .form_contacto .enviar:active {
-    background-color: #29343F;
-    font-weight: bolder;
-    color: white;
     font-size: 18px;
     padding: 20px;
-    box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 1200px) {
+    .form_contacto {
+        padding-top: 0;
+        margin: 20px 50px 0 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .form_contacto h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .form_elemento label {
+        font-size: 18px;
+    }
+
+    .form_elemento input,
+    textarea {
+        width: 200px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    .form_contacto .enviar {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .form_elemento #mensaje {
+        height: 60px;
+    }
+
+    .form_contacto input[type="button"] {
+        width: 200px;
+        font-size: 15px;
+    }
+
 }
 
 /* Eventos */
@@ -219,27 +292,15 @@ textarea {
     height: 650px;
 }
 
-.evento-item {
-    display: flex;
-    height: 100%;
-}
-
 .evento-img {
     flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transition: flex 0.1s linear;
     cursor: pointer;
 }
 
 .evento-img span {
     opacity: 0;
-    transition: opacity 0.1s linear;
     font-size: 50px;
-    color: black;
-    filter: drop-shadow(0 0 5px white);
-    margin-top: 20px;
 }
 
 .evento-img:nth-child(1) {
@@ -270,38 +331,27 @@ textarea {
     color: black;
 }
 
+@media (max-width: 992px) {
+    .evento-item {
+        flex-direction: column;
+        margin-top: 100px;
+    }
+}
+
 /* Menú */
 
 .menu_contenedor {
-    border: 1px solid #3f3f3f;
     display: grid;
     grid-template-columns: repeat(2, 450px);
-    justify-content: center;
-    align-items: center;
     column-gap: 80px;
-    max-width: 100%;
     padding: 150px 0 100px 0;
 }
 
 .menu_item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
     height: 200px;
     border-radius: 26px 58px;
     border: 1px solid #3f3f3f;
     grid-column: 1/2;
-    padding: 15px;
-}
-
-.menu_item h2 {
-    font-size: 25px;
-    padding-bottom: 25px;
-}
-
-.menu_item p {
-    font-size: 23px;
 }
 
 .menu_img {
@@ -316,8 +366,33 @@ textarea {
     height: 800px;
 }
 
-.menu_titulo {
-    font-size: 45px;
+@media (max-width: 1200px) {
+    .menu_contenedor {
+        grid-template-columns: repeat(2, 300px);
+        padding: 120px 0 0 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu_contenedor {
+        grid-template-columns: repeat(1, 350px);
+    }
+
+    .menu_img {
+        grid-column: 1/2;
+        grid-row: 2/3;
+
+    }
+
+    .menu_img img {
+        height: 300px;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .menu_item {
+        margin: 30px 0 10px 0;
+    }
 }
 
 /* Excelencia Culinaria */
@@ -326,11 +401,7 @@ textarea {
     display: grid;
     grid-template-columns: repeat(4, 280px);
     grid-template-rows: 300px;
-    justify-content: center;
-    align-items: center;
     padding: 200px 0 150px 0;
-    gap: 30px;
-    max-width: 100%;
 }
 
 @media (max-width: 1200px) {
@@ -356,11 +427,6 @@ textarea {
 }
 
 .excelencia_item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
     height: 400px;
     margin: 10px 0 10px 0;
     background-color: transparent;
@@ -377,7 +443,6 @@ textarea {
     margin: 0 30px 10px 30px;
     font-size: 20px;
 }
-
 
 /* Footer */
 
