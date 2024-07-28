@@ -46,38 +46,38 @@
     </header>
 
     <main>
-        <section class="contacto_contenedor">
-            <div class="contacto_item">
-                <h3>Dirección</h3>
-                <p>calle x altura x</p>
+        <section class="contacto_contenedor justify-content-center align-items-center w-100 mw-100 ">
+            <div class="contacto_item d-flex flex-column justify-content-center align-items-center w-100 mw-100 h-75">
+                <h3 class="fs-2">Dirección</h3>
+                <p class="fs-4 fst-italic mt-4">calle x altura x</p>
             </div>
-            <div class="contacto_item">
-                <h3>Whatsapp</h3>
-                <p>xx-xxxx-xxxx</p>
+            <div class="contacto_item d-flex flex-column justify-content-center align-items-center w-100 mw-100 h-75">
+                <h3 class="fs-2">Whatsapp</h3>
+                <p class="fs-4 fst-italic mt-4">xx-xxxx-xxxx</p>
             </div>
-            <div class="contacto_item">
-                <h3>Email</h3>
-                <p>xxxxxxxxx@xxxxxxx.com</p>
+            <div class="contacto_item d-flex flex-column justify-content-center align-items-center w-100 mw-100 h-75">
+                <h3 class="fs-2">Email</h3>
+                <p class="fs-4 fst-italic mt-4">xxxxxxxxx@xxxxxxx.com</p>
             </div>
         </section>
 
         <section>
-            <form class="form_contacto">
-                <h2>Contactanos</h2>
-                <div class="form_elemento">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Pedro Gomez" required>
+            <form class="form_contacto d-flex flex-column align-items-center justify-content-center">
+                <h2 class="fs-2 mb-3">Contactanos</h2>
+                <div class="form_elemento p-2">
+                    <label for="nombre" class="d-flex fw-bold fs-4 mb-2">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Pedro Gomez" required class="fs-5">
                 </div>
-                <div class="form_elemento">
-                    <label for="email">Correo Electrónico:</label>
-                    <input type="email" id="email" name="email" placeholder="pedro123@gmail.com" required>
+                <div class="form_elemento p-2">
+                    <label for="email" class="d-flex fw-bold fs-4 mb-2">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="pedro123@gmail.com" required class="fs-5">
                 </div>
-                <div class="form_elemento">
-                    <label for="mensaje">Consulta:</label>
-                    <textarea id="mensaje" name="mensaje" required></textarea>
+                <div class="form_elemento p-2">
+                    <label for="mensaje" class="d-flex fw-bold fs-4 mb-2">Consulta:</label>
+                    <textarea id="mensaje" name="mensaje" required class="fs-5 h-100"></textarea>
                 </div>
                 <div>
-                    <input type="button" value="enviar" class="enviar">
+                    <input type="button" value="enviar" class="enviar p-3 fs-5 text-uppercase $enable-button-pointers">
                 </div>
             </form>
         </section>

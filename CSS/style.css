@@ -119,34 +119,13 @@ header nav ul a:hover {
     display: grid;
     grid-template-columns: repeat(3, 300px);
     grid-template-rows: 300px;
-    justify-content: center;
-    align-items: center;
     column-gap: 120px;
     padding-top: 100px;
-    max-width: 100%;
-    width: 100%;
 }
 
 .contacto_item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     border-right: 2px solid #29343F;
     border-left: 2px solid #29343F;
-    height: 200px;
-    width: 100%;
-    max-width: 100%;
-}
-
-.contacto_item h3 {
-    font-size: 30px;
-}
-
-.contacto_item p {
-    font-size: 25px;
-    margin-top: 30px;
-    font-style: italic;
 }
 
 @media (max-width: 1200px) {
@@ -154,26 +133,21 @@ header nav ul a:hover {
         grid-template-columns: repeat(3, 200px);
         grid-template-rows: 180px;
         column-gap: 60px;
-        padding-top: 80px;
-    }
-
-    .contacto_item {
-        height: 120px;
+        padding-top: 100px !important;
     }
 
     .contacto_item h3 {
-        font-size: 25px;
+        font-size: 25px !important;
     }
 
     .contacto_item p {
-        font-size: 18px;
-        margin-top: 10px;
+        font-size: 20px !important;
     }
 }
 
 @media (max-width: 768px) {
     .contacto_contenedor {
-        grid-template-columns: repeat(2, 100px);
+        grid-template-columns: repeat(2, 150px);
         grid-template-rows: 180px;
         column-gap: 30px;
     }
@@ -188,38 +162,14 @@ header nav ul a:hover {
     backdrop-filter: blur(100px);
     border: 3px solid rgba(255, 255, 255, 0.5);
     background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     margin: 20px 350px 0 350px;
     padding: 50px 0 50px 0;
     border-radius: 25px;
 }
 
-.form_contacto h2 {
-    font-size: 30px;
-    margin-bottom: 15px;
-}
-
-.form_elemento {
-    padding: 10px;
-}
-
-.form_elemento label {
-    font-weight: bold;
-    font-size: 25px;
-    display: flex;
-    margin-bottom: 10px;
-}
-
 .form_contacto input[type="button"] {
-    padding: 20px;
     width: 400px;
     background-color: transparent;
-    font-size: 20px;
-    cursor: pointer;
-    text-transform: uppercase;
     transition: 0.5s;
 }
 
@@ -228,11 +178,6 @@ textarea {
     width: 400px;
     max-width: 500px;
     height: 40px;
-    font-size: 20px;
-}
-
-.form_elemento #mensaje {
-    height: 100px;
 }
 
 .form_contacto .enviar:hover {
@@ -248,42 +193,20 @@ textarea {
 
 @media (max-width: 1200px) {
     .form_contacto {
-        padding-top: 0;
         margin: 20px 50px 0 50px;
     }
 }
 
 @media (max-width: 768px) {
-    .form_contacto h2 {
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
-
-    .form_elemento label {
-        font-size: 18px;
-    }
 
     .form_elemento input,
     textarea {
         width: 200px;
-        height: 30px;
-        font-size: 15px;
-    }
-
-    .form_contacto .enviar {
-        font-size: 15px;
-        padding: 10px;
-    }
-
-    .form_elemento #mensaje {
-        height: 60px;
     }
 
     .form_contacto input[type="button"] {
         width: 200px;
-        font-size: 15px;
     }
-
 }
 
 /* Eventos */
@@ -407,9 +330,8 @@ textarea {
 @media (max-width: 1200px) {
     .excelencia_cont_items {
         grid-template-columns: repeat(2, 300px);
-        padding-top: 300px;
-        padding: 170px 0 20px 0;
-        gap: 80px;
+        padding: 130px 0 20px 0;
+        grid-template-rows: 370px;
     }
 }
 
@@ -417,8 +339,6 @@ textarea {
     .excelencia_cont_items {
         grid-template-columns: repeat(1, 0.7fr);
         grid-template-rows: repeat(4, 400px);
-        padding-top: 300px;
-        padding: 120px 0 20px 0;
     }
 }
 
